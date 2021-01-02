@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Shop <%= yield (:title) %></title>
+    <%= csrf_meta_tags %>
+    <%= csrf_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+ 
+    
+    
+    
+    
+    
+    
+  </head>
+  
+          
+
+ <body class="d-flex flex-column">
+   
+    <%= render 'layouts/header' %>
+    
+
+
+    <div class="container">
+      <div id="content">
+      
+        <%= yield %>
+      </div>
+      <div id="first-column">
+         
+        
+
+
+
+          </div>
+      </div>
+   </div>
+   
+   <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+   <script type="text/javascript" src="/assets/javascripts/backToTop.js"></script>
+   
+<div id="container">
+ 
+  <%= render 'layouts/footer' %>
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<footer class="foot"> 
+<% if session[:login] == 1 %>
+<%= link_to 'New Item', new_item_path, :class =>"button", :role=>"button" %>
+<%= link_to 'New Category', new_category_path, :class =>"button", :role=>"button" %>
+<% end %>
+
+                    <p>Vanja's Music Shop ltd.</p>
+                    <p>Telephone: +353 (87) 8888888</p>
+                    <p>Emil: info@VanjasMusicShop.ie</p>
+                    <p><small>Copyright &copy; Vanja's Music Shop</small></p>
+                    
+
+</footer>
+
+
+

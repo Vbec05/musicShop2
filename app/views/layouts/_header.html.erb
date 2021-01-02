@@ -1,0 +1,60 @@
+   <header class="headSec">
+     
+      <h1>Vanja's Music Shop</h1>
+     <%= javascript_include_tag :application %> <%= csrf_meta_tag %>
+     
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      
+      <ul>
+        <li><%= link_to "Home",  "/" %></li>
+        		
+			 
+        <li><div class="dropdown"><a <%= link_to "Products", "/items" %> <button class="dropbtn" ></button>
+        
+        <div class="dropdown-content">
+      				<a href="/category/Wind%20Instruments">Wind Instruments</a>
+      				<a href="/category/Guitar">Guitars</a>
+      				<a href="/category/Piano">Pianos</a>
+      			    <a href="/category/Percussion%20Instruments">Percussion Instruments</a>
+    			</div></a></li>
+        
+        
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact Us", help_path %></li>
+        <li><%= link_to "Cart", cart_path %></li>
+        
+        
+        
+         <% if user_signed_in? %>
+                 <!--
+                 <li><a href="#">Hi <%= current_user.email %></a></li>
+                 -->
+                 <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                 <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+                 <li><%= link_to "View Orders", orders_path  %></li>
+          <% else %>
+                 <li><%= link_to 'Register', new_user_registration_path %></li> 
+                 <li><%= link_to 'Sign in', new_user_session_path %></li>
+          <% end %>
+
+         
+        <% if session[:login] == 1 %>    
+          <li><%= link_to "Admin Log Out",   logout_path %></li>
+        <% else %>
+          <li><%= link_to "Admin Log In",   login_path %></li>
+        <% end %>
+        <li class="form-inline my-2 my-lg-0">
+              <div class="searchbox">
+            <%=render 'layouts/search'%>
+            </li>
+        
+
+      </ul>
+     </div>
+</nav>
+
+      
+         
+    </header>

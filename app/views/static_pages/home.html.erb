@@ -1,0 +1,36 @@
+<div class="mainCont">
+    
+    <!-- homepage automatic slideshow -->
+<div class="slideshow-containerHome">
+
+<div class="mySlides fade">
+  <%= image_tag("guitar.jpg", alt: "Welcome Logo", :class => "welcomeIm") %>
+</div>
+
+<div class="mySlides fade">
+  <%= image_tag("MusicImage.PNG", alt: "Welcome Logo", :class => "welcomeIm") %>
+ 
+</div>
+
+<div class="mySlides fade">
+  <%= image_tag("MusicImage2.PNG", alt: "Welcome Logo", :class => "welcomeIm") %>
+  
+</div>
+
+</div>
+
+    
+    
+   
+    
+
+<% provide(:title, "Welcome to Vanja's Music Shop") %>
+    
+<h1>Welcome to Vanja's Music Shop</h1>
+<p>Where your musical journey begins !!!</p>
+<p>Please choose from one of our categories below.</p>
+<br>
+
+
+<%=render 'layouts/categories'%>
+<script type="text/javascript" src="/assets/javascripts/homeslide.js"></script>
