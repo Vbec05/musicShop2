@@ -34,7 +34,7 @@ gem 'devise', '~> 4.4'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'gravatar_image_tag', '~> 1.2'
-gem 'webpacker', '~> 3.0'
+gem 'webpacker', '~> 3.2'
 
 
 
